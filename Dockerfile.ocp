@@ -4,7 +4,7 @@ ADD . /go/src/github.com/metal3-io/metal3-smart-exporter
 
 RUN go build -o smart_exporter ./smart_exporter.go
 
-FROM rhel7:latest
+FROM ubi8
 
 RUN yum install -y smartmontools && yum clean all
 
